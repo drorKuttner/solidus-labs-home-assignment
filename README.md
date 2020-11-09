@@ -1,6 +1,6 @@
 # SolidusLabsHomeAssignment
 
-Run `npm install` to installation.
+Run `npm install` for installation.
 
 Run `ng serve` for a dev server.
 
