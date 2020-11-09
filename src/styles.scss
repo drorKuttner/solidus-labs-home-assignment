@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./styles/bootstarp.min.css";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+:focus {
+  outline: none !important;
+}
+
+.none-message {
+  width: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+  .table td,
+  .chart-header div {
+    font-size: 12px !important;
+  }
+
+  .chart-header div {
+    height: 56px;
+  }
+
+  .field-value {
+    font-size: 11px !important;
+  }
+}
+
+mat-card {
+  background-color: #f4f1bb !important;
+  color: #5ca4a9 !important;
+
+  .mat-button-disabled mat-icon {
+    color: #ed6a5a;
+  }
+
+  .mat-table {
+    background-color: #f4f1bb;
+    .mat-cell {
+      color: #5ca4a9;
+      border-color: #9bc1bc;
+    }
+
+    .mat-header-cell {
+      color: #ed6a5a;
+      border-color: #9bc1bc;
+    }
+
+    .mat-icon {
+      color: lightgreen;
+      cursor: pointer;
+    }
+  }
+}
+
+.mat-select-panel {
+  background: #e6ebe0 !important;
+  span {
+    color: #5ca4a9;
+  }
+}
+
+.mat-select-value {
+  color: #5ca4a9;
+}
+
+.mat-paginator {
+  background-color: #e6ebe0 !important;
+}
+
+.ngx-charts {
+  text {
+    fill: #5ca4a9;
+  }
+}

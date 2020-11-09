@@ -1,0 +1,28 @@
+$desktop-max-width: 600px;
+
+.field-value {
+  color: #5ca4a9;
+}
+
+.active-event-box {
+  height: 125px;
+}
+
+.chart {
+  max-width: $desktop-max-width;
+  width: 100%;
+  background: #f4f1bb;
+  border-radius: 5px;
+}
+
+.player-container {
+  max-width: $desktop-max-width;
+  width: 100%;
+}
+
+.black {
+  color: black;
+}
+label {
+  color: #ed6a5a;
+}

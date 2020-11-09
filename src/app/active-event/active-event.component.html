@@ -1,0 +1,45 @@
+<div class="d-flex flex-column align-items-center">
+  <div class="chart m-3">
+    <h4 class="black p-3 d-flex justify-content-between chart-header">
+      <div class="field-value">
+        <label>Event</label>
+        <div>
+          {{ (activeEvent | async)?.index + 1 }} of {{ numberOfEvents }}
+        </div>
+      </div>
+      <div class="field-value">
+        <label>Time</label>
+        <div>{{ (activeEvent | async)?.timestamp | date: "hh:mm:ss" }}</div>
+      </div>
+      <div class="field-value">
+        <label> Price </label>
+        <div>{{ (activeEvent | async)?.price }}</div>
+      </div>
+      <div class="field-value">
+        <label> Status </label>
+        <div>{{ (activeEvent | async)?.status }}</div>
+      </div>
+    </h4>
+
+    <ngx-charts-bar-vertical
+      #chart
+      [hidden]="!(activeEvent | async)"
+      [scheme]="chartColorScheme"
+      [results]="chartData | async"
+      [gradient]="false"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="false"
+      [showXAxisLabel]="true"
+      [showYAxisLabel]="true"
+      [view]="[chartWidth, 300]"
+      xAxisLabel="Time"
+      yAxisLabel="Price"
+    >
+    </ngx-charts-bar-vertical>
+  </div>
+
+  <mat-card class="m-3 player-container">
+    <app-events-player></app-events-player>
+  </mat-card>
+</div>
